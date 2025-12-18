@@ -2,112 +2,92 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Tanvi ❤️</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<title>Quiz time</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
     body {
         margin: 0;
         font-family: 'Poppins', sans-serif;
-        background: linear-gradient(to bottom right, #ffe6eb, #fff);
-        color: #333;
+        background: linear-gradient(to bottom right, #fff0f5, #ffe6eb);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
         text-align: center;
     }
-    .container {
-        padding: 60px 20px;
-        max-width: 800px;
-        margin: auto;
+    .card {
+        background: white;
+        padding: 50px 30px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        max-width: 500px;
+        width: 90%;
     }
     h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 3em;
         color: #c2185b;
+        margin-bottom: 20px;
     }
-    h2 {
-        font-weight: 300;
-    }
-    .heart {
-        font-size: 3em;
-        animation: pulse 1.5s infinite;
-    }
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.2); }
-        100% { transform: scale(1); }
-    }
-    .message {
-        font-size: 1.1em;
-        line-height: 1.8;
-        margin: 40px 0;
-    }
-    .photos img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 15px;
-        margin: 10px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-    .proposal {
-        margin-top: 50px;
-    }
-    .proposal h1 {
-        font-size: 3.5em;
-    }
-    button {
-        margin-top: 30px;
-        padding: 15px 40px;
-        font-size: 1.2em;
+    .options button {
+        display: block;
+        width: 100%;
+        margin: 12px 0;
+        padding: 14px;
+        font-size: 1em;
         border: none;
-        border-radius: 50px;
-        background: #c2185b;
-        color: white;
+        border-radius: 12px;
+        background: #f8bbd0;
         cursor: pointer;
         transition: 0.3s;
     }
-    button:hover {
-        background: #a0144a;
+    .options button:hover {
+        background: #f48fb1;
     }
-    footer {
-        margin-top: 60px;
-        font-size: 0.9em;
-        color: #777;
+    .message {
+        margin-top: 25px;
+        font-size: 1.1em;
+        color: #444;
+    }
+    .proposal {
+        display: none;
+        margin-top: 30px;
+    }
+    .proposal h2 {
+        color: #c2185b;
+        font-size: 2em;
     }
 </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="heart">❤️</div>
-    <h2>This is for you</h2>
+<div class="card">
+    <h1>Just one question 💖</h1>
+    <p>Who is better? (in every aspect)</p>
 
-    <div class="message">
-	From the moment I met you, I fell in love with you and the version of me that comes out when I am with you. <br>
-        Every laugh, every conversation, and every silence with you feels perfect.<br>
+    <div class="options">
+        <button onclick="wrongAnswer()">Fawad Khan</button>
+        <button onclick="wrongAnswer()">Fawad Khan</button>
+        <button onclick="rightAnswer()">Me</button>
+        <button onclick="wrongAnswer()">Fawad Khan</button>
     </div>
 
-<div class="photos">
-        <img src="20250103_103853.jpg" alt="Us">
+    <div class="message" id="message"></div>
+
+    <div class="proposal" id="proposal">
+        <a href="proposal.html">Don't click this</a>
     </div>
-
-
-    <div class="proposal">
-        <h1>Will you spend the rest of your life with me?</h1>
-	<button onclick="playSong()">Yes ❤️</button>
-    </div>
-
-    <footer>
-        Made with love, just for you.
-    </footer>
 </div>
 
-<audio id="loveSong">
-    <source src="wonderful-tonight.mp3" type="audio/mpeg">
-</audio>
-
 <script>
-function playSong() {
-    document.getElementById("loveSong").play();
-}
+    function wrongAnswer() {
+        document.getElementById("message").innerText =
+            "Hmm… I don’t think that’s the right answer 😉 Try again!";
+    }
+
+    function rightAnswer() {
+        document.getElementById("message").innerText =
+            "I knew you'd choose this in your first try ❤️";
+        document.getElementById("proposal").style.display = "block";
+    }
 </script>
 
 </body>
