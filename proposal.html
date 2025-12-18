@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Tanvi ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to bottom right, #ffe6eb, #fff);
+        color: #333;
+        text-align: center;
+    }
+    .container {
+        padding: 60px 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3em;
+        color: #c2185b;
+    }
+    h2 {
+        font-weight: 300;
+    }
+    .heart {
+        font-size: 3em;
+        animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+    .message {
+        font-size: 1.1em;
+        line-height: 1.8;
+        margin: 40px 0;
+    }
+    .photos img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .proposal {
+        margin-top: 50px;
+    }
+    .proposal h1 {
+        font-size: 3.5em;
+    }
+    button {
+        margin-top: 30px;
+        padding: 15px 40px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 50px;
+        background: #c2185b;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover {
+        background: #a0144a;
+    }
+    footer {
+        margin-top: 60px;
+        font-size: 0.9em;
+        color: #777;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="heart">❤️</div>
+    <h2>This is for you</h2>
+
+    <div class="message">
+	From the moment I met you, I fell in love with you and the version of me that comes out when I am with you. <br>
+        Every laugh, every conversation, and every silence with you feels perfect.<br>
+    </div>
+
+<div class="photos">
+        <img src="20250103_103853.jpg" alt="Us">
+    </div>
+
+
+    <div class="proposal">
+        <h1>Will you spend the rest of your life with me?</h1>
+	<button onclick="playSong()">Yes ❤️</button>
+    </div>
+
+    <footer>
+        Made with love, just for you.
+    </footer>
+</div>
+
+<audio id="loveSong">
+    <source src="wonderful-tonight.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function playSong() {
+    document.getElementById("loveSong").play();
+}
+</script>
+
+</body>
+</html>
