@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quiz time</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to bottom right, #fff0f5, #ffe6eb);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+    .card {
+        background: white;
+        padding: 50px 30px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        max-width: 500px;
+        width: 90%;
+    }
+    h1 {
+        color: #c2185b;
+        margin-bottom: 20px;
+    }
+    .options button {
+        display: block;
+        width: 100%;
+        margin: 12px 0;
+        padding: 14px;
+        font-size: 1em;
+        border: none;
+        border-radius: 12px;
+        background: #f8bbd0;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .options button:hover {
+        background: #f48fb1;
+    }
+    .message {
+        margin-top: 25px;
+        font-size: 1.1em;
+        color: #444;
+    }
+    .proposal {
+        display: none;
+        margin-top: 30px;
+    }
+    .proposal h2 {
+        color: #c2185b;
+        font-size: 2em;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>One Important Question 💖</h1>
+    <p>Who is better? (in every aspect)</p>
+
+    <div class="options">
+        <button onclick="wrongAnswer()">Fawad Khan</button>
+        <button onclick="wrongAnswer()">Fawad Khan</button>
+        <button onclick="rightAnswer()">Me</button>
+        <button onclick="wrongAnswer()">Fawad Khan</button>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <div class="proposal" id="proposal">
+        <a href="proposal.html">Click for Bonus</a>
+    </div>
+</div>
+
+<script>
+    function wrongAnswer() {
+        document.getElementById("message").innerText =
+            "Hmm… I don’t think that’s the right answer 😉 Try again!";
+    }
+
+    function rightAnswer() {
+        document.getElementById("message").innerText =
+            "I knew you'd choose this in your first try ❤️";
+        document.getElementById("proposal").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
+
+
+
