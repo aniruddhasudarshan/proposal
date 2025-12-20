@@ -5,22 +5,19 @@
 <title>Quiz time</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-  .photos {
-    width: 100vw;
-    height: 100vh;
+.photos {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    gap: 12px;
 }
 
 .photos img {
-    width: 50%;
-    height: 50%;
-    object-fit: contain; /* use 'cover' if you want it to fill completely */
+    width: 45vw;        /* side by side */
+    height: auto;
+    max-height: 90vh;   /* fit on screen */
+    object-fit: contain;
 }
-
-    
     body {
         margin: 0;
         font-family: 'Poppins', sans-serif;
